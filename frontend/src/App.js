@@ -1,10 +1,15 @@
 
 import './App.css';
+import {About,Footer,Header,Works,Skills} from "./containers"
 
 function App() {
   return (
     <div className="App">
-     <h1>hello</h1>
+    <About/>
+    <Header/>
+    <Skills/>
+    <Works/>
+    <Footer/>
     </div>
   );
 }
