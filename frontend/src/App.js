@@ -1,10 +1,11 @@
 
-import './App.css';
+import './App.scss';
 import {About,Footer,Header,Works,Skills} from "./containers"
-
+import{Navbar} from "./components"
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+    <Navbar/>  
     <About/>
     <Header/>
     <Skills/>
