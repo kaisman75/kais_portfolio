@@ -173,12 +173,13 @@
     align-items: center;
     position: relative;
     align-content: flex-start;
-  
+    
     img {
-      width: 70%;
-      height: 100%;
+      width: 81%;
+      height:78%;
       object-fit: contain;
       z-index: 1;
+       border-radius: 378px;
     }
   
     .overlay_circle {
