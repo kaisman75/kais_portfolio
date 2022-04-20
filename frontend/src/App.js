@@ -7,10 +7,10 @@ function App() {
     <div className="app">
     <Navbar/>  
     <Header/>
-    {/* <About/>
+    <About/>
     <Skills/>
     <Works/>
-    <Footer/> */}
+    <Footer/>
     </div>
   );
 }
