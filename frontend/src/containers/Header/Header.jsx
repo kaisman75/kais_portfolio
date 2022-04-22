@@ -65,6 +65,9 @@ const Header = () => (
         </div>
       ))}
     </motion.div>
+    <div className='app__social-media'>
+      <div className=''/>
+    </div>
   </div>
 );
 
