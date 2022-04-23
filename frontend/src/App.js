@@ -1,12 +1,11 @@
 
 import './App.scss';
 import {About,Footer,Header,Works,Skills} from "./containers"
-import{Navbar ,Social} from "./components"
+import{Navbar} from "./components"
 function App() {
   return (
     <div className="app">
-     <Navbar/> 
-     <Social/> 
+     <Navbar/>  
     <Header/>
     <About/>
     <Skills/>
