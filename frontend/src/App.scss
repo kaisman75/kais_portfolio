@@ -164,11 +164,10 @@
     border-radius: 50%;
     background-color: #cbcbcb;
     margin: 0.5rem;
-
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: #000;
     }
 
     @media screen and (min-width: 2000px) {

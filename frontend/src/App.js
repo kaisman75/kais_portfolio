@@ -1,15 +1,15 @@
 
 import './App.scss';
-import {About,Footer,Header,Works,Skills} from "./containers"
+import {About,Footer,Header,Work,Skills} from "./containers"
 import{Navbar} from "./components"
 function App() {
   return (
     <div className="app">
-     <Navbar/>  
+    <Navbar/>  
     <Header/>
     <About/>
+    <Work/>
     <Skills/>
-    <Works/>
     <Footer/> 
     </div>
   );
