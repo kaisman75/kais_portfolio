@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { AppWrap} from '../../Wrapper';
-import { urlFor, client } from '../../Client';
+import {urlFor, client } from '../../Client';
 import './Works.scss';
 
 const Work = () => {
@@ -17,6 +17,7 @@ const Work = () => {
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
+      console.log(data)
     });
   }, []);
 
@@ -37,10 +38,10 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+      <h2 className="head-text">Love what <span>you do</span><br/> do what <span>You love</span></h2>
 
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {['UI/UX', 'Web App', 'React JS', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}

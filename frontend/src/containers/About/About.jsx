@@ -41,14 +41,11 @@ const About = () => {
         
       </div>
       <div className='app__About-section'>
-          <div className='img-section'>
-            <img src={images.profile2} alt="myProfile"/>
-          </div>
           <div className='p-section'>
           <h2 className="head-text">I Know that <span>Good Dev</span> <br />means  <span>Good Business</span></h2>
             <p>
             With a professional experience of more than five years as a civil
-            servant, I acquired an excellent command of the computer tool,
+            servant, I acquired an excellent command of the computer tools,
             passionate about web development , I know how to adapt quickly in order to meet the
             time constraints imposed on me, I am a young serious family man who
             is punctual and organized. Responsible and voluntary, I am convinced
@@ -56,7 +53,12 @@ const About = () => {
             entire disposal to provide you with any further information .
           </p>
           </div>
-         
+          <motion.div
+            whileInView={{ x: [200, 0], opacity: [0, 1] }}
+            transition={{ duration: 1.5 }}
+          className='img-section'>
+            <img src={images.profile2} alt="myProfile"/>
+          </motion.div>
       </div>
     </div>
   );
