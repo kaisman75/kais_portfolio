@@ -2,6 +2,12 @@ import React ,{useState}from 'react'
 import "./Navbar.scss"
 import images from '../../constants/images'
 import { HiMenu,HiXCircle } from "react-icons/hi";
+import{FaHome,FaLaptopCode} from "react-icons/fa"
+import{BsFillPersonLinesFill} from "react-icons/bs"
+import{IoIosAlbums} from "react-icons/io"
+import{MdContactMail} from "react-icons/md"
+
+
 import { motion } from "framer-motion"
 
 const Navbar = () => {
@@ -12,14 +18,33 @@ const Navbar = () => {
             <img src={images.logo} alt="logo"/>
         </div>
         <ul  className="app__navbar-links">
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-                <li className="app__flex p-text" key={`link-${item}`}>
-                  <div />
-                  <a href={`#${item}`} onClick={()=>{setToggle(false)}}>
-                    {item}
+              
+              <li key="home">
+                  <a href="/" onClick={() => setToggle(false)}>
+                    <FaHome/>
                   </a>
-                </li>
-              ))}
+              </li>
+              <li key="about">
+                  <a href="#about" onClick={() => setToggle(false)}>
+                    <BsFillPersonLinesFill/>
+                  </a>
+              </li>
+              <li key="works">
+                  <a href="#work" onClick={() => setToggle(false)}>
+                    <IoIosAlbums/>
+                  </a>
+              </li>
+              <li key="Skills">
+                  <a href="#skills" onClick={() => setToggle(false)}>
+                    <FaLaptopCode/>
+                  </a>
+              </li>
+              <li key="contact">
+                  <a href="#contact" onClick={() => setToggle(false)}>
+                    <MdContactMail/>
+                  </a>
+              </li>
+           
             </ul>
             <div className='app__navbar-menu'>
             <HiMenu onClick={() => setToggle(true)} />

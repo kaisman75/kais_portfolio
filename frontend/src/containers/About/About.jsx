@@ -19,7 +19,7 @@ const About = () => {
   },[])
 
   return (
-    <div className='app__about'>
+    <div className='app__about app__whitebg'>
       
    
       <div className="app__profiles">
@@ -56,7 +56,7 @@ const About = () => {
           <motion.div
             whileInView={{ x: [200, 0], opacity: [0, 1] }}
             transition={{ duration: 1.5 }}
-          className='img-section'>
+            className='img-section'>
             <img src={images.profile2} alt="myProfile"/>
           </motion.div>
       </div>

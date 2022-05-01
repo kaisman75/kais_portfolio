@@ -10,17 +10,17 @@
     a{
         margin: 5px;
         text-align: center;
-        :hover{
+      &:hover{
             cursor: pointer; 
-             width: 10px;
-        }
+             width: 1.3em;
+        } 
    }     
 
     
     svg{
-       height: 1em;
-       width: 1.3em;
-       
+       height: 1.5em;
+       width: 1.8em;
+        
 }
 }   
 .line-up {

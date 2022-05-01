@@ -25,9 +25,9 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">Skills</h2>
 
-      <div className="app__skills-container">
+      <div className="app__skills-container app__whitebg">
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
             <motion.div
