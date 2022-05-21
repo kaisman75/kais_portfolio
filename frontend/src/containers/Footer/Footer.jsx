@@ -14,25 +14,33 @@ const Footer = () => {
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+   
+      setFormData({ ...formData, [name]: value });
+    
+    
   };
 
   const handleSubmit = () => {
-    setLoading(true);
+   
+      setLoading(true);
 
-    const contact = {
-      _type: 'contact',
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
-    };
+      const contact = {
+        _type: 'contact',
+        name: formData.username,
+        email: formData.email,
+        message: formData.message,
+       
+    }
+    
+  
+      client.create(contact)  
+        .then(() => {
+          setLoading(false);
+          setIsFormSubmitted(true);
+        })
+        .catch((err) => console.log(err));
+    
 
-    client.create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
-      .catch((err) => console.log(err));
   };
 
   return (
@@ -46,7 +54,7 @@ const Footer = () => {
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">+216 20336533</a>
+          <a href="tel:+216 20336533" className="p-text">+216 20336533</a>
         </div>
       </div>
       {!isFormSubmitted ? (

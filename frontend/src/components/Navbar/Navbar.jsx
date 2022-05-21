@@ -1,18 +1,32 @@
-import React ,{useState}from 'react'
+import React ,{useState, useContext} from 'react'
 import "./Navbar.scss"
 import images from '../../constants/images'
 import { HiMenu,HiXCircle } from "react-icons/hi";
-import{FaHome,FaLaptopCode} from "react-icons/fa"
+import{FaHome,FaLaptopCode,FaRegMoon} from "react-icons/fa"
+import{FiSun} from "react-icons/fi"
 import{BsFillPersonLinesFill} from "react-icons/bs"
 import{IoIosAlbums} from "react-icons/io"
 import{MdContactMail} from "react-icons/md"
-
-
 import { motion } from "framer-motion"
+import { ThemeContext } from '../../constants/Context';
+ 
 
+
+
+  
 const Navbar = () => {
+  const {theme,toggleTheme}=useContext(ThemeContext) 
   const [toggle, setToggle] = useState(false);
+  const [toggleImg,setToggleImg]=useState(false)
+  
+  const handleTheme=()=>{
+    
+    toggleTheme(theme);
+    setToggleImg(!toggleImg)
+    
+  }
   return (
+ 
     <nav className='app__navbar'>
         <div className='app__navbar-logo' >
             <img src={images.logo} alt="logo"/>
@@ -68,7 +82,13 @@ const Navbar = () => {
 )}
            
             </div>
+
+            <div className='app__theme'>
+                    <a onClick={handleTheme}>{toggleImg?<FiSun style={{color:"white"}}/>:<FaRegMoon style={{color:"black"}}/>}</a>
+            </div>
+          
     </nav>
+    
   )
 }
 

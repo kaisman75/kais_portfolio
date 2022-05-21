@@ -6,17 +6,20 @@ export default {
         {
             name:'name',
             title:'Name',
-            type:'string'
+            type:'string',
+            require:true 
         },
         {
             name:'email',
             title:'Email',
-            type:'string'
+            type:'string',
+            require:true 
         },
         {
             name:'message',
             title:'Message',
-            type:'text'
+            type:'text',
+            require:true 
         }
     ]
 }
